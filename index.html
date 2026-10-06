@@ -383,7 +383,7 @@ trainStart();
 (function labelBlocks() {
   const counts = {2:0, 3:0, all:DATA.length};
   DATA.forEach(q => { counts[q.b]++; });
-  document.querySelectorAll(".blockBtn").forEach(b => {
+  document.querySelectorAll("#paneE11 .blockBtn").forEach(b => {
     const k = b.dataset.b;
     b.textContent = (k === "all" ? "Все вместе" : BLOCK_NAMES[k]) + ` (${counts[k]})`;
   });
@@ -565,7 +565,7 @@ trainStart2();
 (function labelBlocks2() {
   const counts = {1:0, 2:0, "2.1":0, 3:0, 4:0, all:DATA2.length};
   DATA2.forEach(q => { counts[q.b]++; if (is212(q)) counts["2.1"]++; });
-  document.querySelectorAll(".blockBtn").forEach(b => {
+  document.querySelectorAll("#paneE12 .blockBtn").forEach(b => {
     const k = b.dataset.b;
     b.textContent = (k === "all" ? "Все вместе" : BLOCK_NAMES2[k]) + ` (${counts[k]})`;
   });
